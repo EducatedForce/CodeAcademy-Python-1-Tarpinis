@@ -1,4 +1,5 @@
-# Turimas "users" masyvas. 
+# Turimas "users" masyvas.
+from statistics import mean
 
 # Parašykite funkcijas, kurios atlikas nurodytas užduotis:
 # 1. funkcija "getUserAverageAge" - kaip argumentą priims masyvą ir duoto masyvo 
@@ -19,3 +20,17 @@ users = [
     {"id": '8', "name": 'Simon Peterson', "age": 30},
     {"id": '9', "name": 'Daniel Cane', "age": 51},
 ]
+
+
+def get_user_average_age(users_list):
+    """Returns average age of users in provided list of users."""
+    users_age_list = [user["age"] for user in users_list]
+    age_average = mean(users_age_list)
+    return round(age_average, 2)
+
+
+def get_user_names(users_list):
+    """Returns list of users names (ascending) from provided list of users."""
+    users_name_list = [user["name"] for user in users_list]
+    users_name_list.sort()
+    return users_name_list
