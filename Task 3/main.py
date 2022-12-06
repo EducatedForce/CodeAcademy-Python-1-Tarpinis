@@ -9,3 +9,8 @@ audi = {
     "year": 2005,
     "color": 'white',
 }
+
+
+def show_object_keys(dictionary):
+    """Function takes dictionary and returns its values in a list."""
+    return [value for key, value in dictionary.items()]
